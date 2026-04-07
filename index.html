@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kate Joyce | IT Portfolio</title>
+
+<!-- ICONS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+    :root {
+        --bg: #020617;
+        --card: rgba(255,255,255,0.05);
+        --text: #e2e8f0;
+        --subtext: #94a3b8;
+    }
+
+    body.light {
+        --bg: rgba(224, 221, 250, 0.7);
+        --card: rgba(224, 221, 250, 0.7);
+        --text: #0f172a;
+        --subtext: #475569;
+    }
+
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        transition: 0.4s;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: auto;
+        padding: 50px 20px;
+    }
+
+    /* TOGGLE BUTTON */
+    .toggle {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: var(--card);
+        backdrop-filter: blur(10px);
+        padding: 10px 12px;
+        border-radius: 10px;
+        cursor: pointer;
+        z-index: 10;
+    }
+
+    /* HEADER */
+    .header {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .header h1 {
+        font-size: 38px;
+        margin: 0;
+        font-weight: 600;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    
+
+    .typing {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 0;
+        animation: typing 3s steps(20) forwards, blink .8s infinite;
+    }
+
+    @keyframes typing {
+        to { width: 270px; }
+    }
+
+    @keyframes blink {
+        50% { border-color: transparent; }
+    }
+
+    .header p {
+        color: var(--subtext);
+        margin-top: 10px;
+    }
+
+    /* CARD */
+    .card {
+        background: var(--card);
+        backdrop-filter: blur(14px);
+        padding: 28px;
+        border-radius: 18px;
+        margin-bottom: 25px;
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    h2 {
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    h2 i {
+        margin-right: 8px;
+        color: #38bdf8;
+    }
+
+    p {
+        line-height: 2;
+        margin-bottom: 12px;
+        text-indent: 30px;
+    }
+
+    /* INFO */
+    .info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .info div {
+        padding: 12px;
+        border-radius: 10px;
+        background: rgba(255,255,255,0.04);
+    }
+
+    .label {
+        font-weight: bold;
+        color: var(--subtext);
+    }
+
+    /* SKILLS */
+    .skills span {
+        display: inline-block;
+        padding: 7px 14px;
+        margin: 6px;
+        border-radius: 20px;
+        background: rgba(255,255,255,0.06);
+        font-size: 12px;
+        transition: 0.3s;
+    }
+
+    .skills span:hover {
+        transform: translateY(-2px);
+        background: rgba(255,255,255,0.12);
+    }
+
+</style>
+</head>
+
+<body>
+
+<!-- TOGGLE -->
+<div class="toggle" onclick="toggleMode()">
+    <i class="fas fa-moon"></i>
+</div>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1 class="typing"><i class="fas fa-user"></i> Kate Joyce</h1>
+        <p>BS Information Technology Student | Web Development Enthusiast</p>
+    </div>
+
+    <!-- PROFILE -->
+    <div class="card">
+        <h2><i class="fas fa-user"></i>Profile</h2>
+        <div class="info">
+            <div><span class="label">Name:</span> Kate Joyce Superio</div>
+            <div><span class="label">Course:</span> BSIT</div>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="card">
+        <h2><i class="fas fa-circle-info"></i>About Me</h2>
+
+        <p>I am currently studying Information Technology and exploring different areas of web development and system design.</p>
+
+        <p>I am that kind of person who is both driven and detail-oriented. When I work on something whether it’s a system, a design, or documentation, I don’t like settling for something that is just “okay.” I tend to review and refine my work until I feel satisfied with the outcome.</p>
+
+        <p>At the same time, I have a strong appreciation for design and presentation. I prefer outputs that are clean, modern, and professional, but still carry a sense of personality.</p>
+
+        <p>I also see myself as practical and solution-focused. When I encounter problems, I try to understand them clearly and look for ways to solve them step by step.</p>
+
+        <p>Overall, I believe I am someone who is continuously growing and learning. I am currently working on developing my skills further, especially in technical and system-related areas.</p>
+
+    </div>
+
+    <!-- SKILLS -->
+    <div class="card">
+        <h2><i class="fas fa-code"></i>Skills</h2>
+        <div class="skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>PHP</span>
+            <span>MySQL</span>
+        </div>
+    </div>
+
+    <!-- GOAL -->
+    <div class="card">
+        <h2><i class="fas fa-bullseye"></i>Career Goal</h2>
+        <p>To become a skilled IT professional capable of designing and developing efficient, user-friendly, and scalable systems.</p>
+    </div>
+
+</div>
+
+<script>
+function toggleMode() {
+    document.body.classList.toggle("light");
+}
+</script>
+
+</body>
+</html>
